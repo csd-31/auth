@@ -2,6 +2,7 @@ import React from 'react'
 import '../App.css'
 
 function Login() {
+  // function to redirect to google authentication route
     const google = () => {
         window.open("http://localhost:4000/auth/google", "_self");
       };

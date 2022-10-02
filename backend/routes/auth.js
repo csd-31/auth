@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const passport = require('passport')
 
+//routes
 router.get("/login/success", (req, res) => {
     res.status(200).json({
       success: true,
@@ -27,6 +28,8 @@ router.get("/google",
   passport.authenticate("google", { scope: ["profile"] })
 );
 
+
+//route for google authentication
 router.get("/google/callback",
 passport.authenticate("google", {  failureRedirect: "/login/failed" }), 
 function(req, res) {

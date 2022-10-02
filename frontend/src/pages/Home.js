@@ -2,6 +2,7 @@ import React from 'react'
 import '../App.css'
 
 function Home({ user }) {
+  //logout function
   const logout = () => {
     window.open("http://localhost:4000/auth/logout", "_self");
   };

@@ -5,8 +5,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
+  //user data stored in a state
   const [user, setUser] = useState(null);
 
+  // fetching user data
   useEffect(() => {
     const getUser = () => {
       fetch("http://localhost:4000/auth/login/success", {
@@ -31,7 +33,9 @@ function App() {
     };
     getUser();
   }, []);
+
   return (
+    //routes using react router dom
     <BrowserRouter>
     <div className='App'>
       <Routes>
